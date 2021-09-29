@@ -1,0 +1,51 @@
+{
+  "name": "Dungeon-Hunt",
+  "version": "1.0.0",
+  "description": "Dungeon",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --config webpack/prod.js",
+    "start-client": "webpack-dev-server --config webpack/base.js --open",
+    "start-server": "node ./server/server.js",
+    "start": "concurrently \"npm:start-server\" \"npm:start-client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/de-Dungeon-Crawler/Dungeon-gameplay.git"
+  },
+  "author": "Sagar Behara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/de-Dungeon-Crawler/Dungeon-gameplay/issues"
+  },
+  "homepage": "https://github.com/de-Dungeon-Crawler/Dungeon-gameplay#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@colyseus/loadtest": "^0.11.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^3.1.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@colyseus/monitor": "^0.11.0",
+    "@colyseus/social": "^0.10.2",
+    "colyseus": "^0.11.0",
+    "colyseus.js": "^0.11.7",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-jwt": "^6.0.0",
+    "ipfs-core": "^0.11.1",
+    "nkn-sdk": "^1.2.0",
+    "phaser": "^3.20.1",
+    "socket.io-client": "^2.3.0"
+  }
+}
